@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kapil's PortFolio</title>
+    <title>Responsive Navbar</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -50,7 +50,7 @@
                     <h1>Kapil Goyal</h1>
                     <p style="background-color: beige; color: blueviolet; width: 160px; text-align: center;">Full stack developer</p>
                     <p>Hello, 🎉 I’m kapil goyal, a recent Computer application graduate with a strong passion for software development and data analysis. Having completed my degree 🎓 from J.C. Bose University of science and technology, I’ve gained a solid foundation in 💻 programming and problem-solving 💡, which I’m eager to apply in a professional setting!! 🚀</p>
-                    <button>Resume</button>
+                    <button onclick="location.href='resume.pdf';" >Resume</button>
                 </div>
                 
             </div>
@@ -264,11 +264,12 @@
         <div class="contact">
             <div class="form">
                 <h1>Get In Touch</h1>
-                <form action="">
+                <form action="https://api.web3forms.com/submit" method="post">
                     <div class="ct">
                         <div class="">
+                        <input type="hidden" name="access_key" value="d9db1f32-f304-4c2e-ad7d-f4cdbf888ce6" id="">
                         <label for="">First Name :</label> <br>
-                        <input type="text" placeholder="PLease Enter Your First Name">
+                        <input type="text" name="name" required placeholder="PLease Enter Your First Name">
                     </div>
                     <div class="">
                         <label for="">Last Name :</label><br>
@@ -276,20 +277,20 @@
                     </div>
                     <div class="">
                         <label for="">Enter Email :</label> <br>
-                        <input type="email" placeholder="PLease Enter Your Email">
+                        <input type="email" name="email" placeholder="PLease Enter Your Email">
                     </div>
                     <div class="">
                         <label for="">Enter phone.No :</label><br>
-                        <input type="text" placeholder="PLease Enter Your Number">
+                        <input type="text" name="phone" placeholder="PLease Enter Your Number">
                     </div>
                     
                     </div>
                     <div class="textarea">
                         <label for="">Enter Your Message :</label> <br>
-                        <textarea name="" id=""  placeholder="PLease Enter Your Message"></textarea>
+                        <textarea name="message" id=""  placeholder="PLease Enter Your Message"></textarea>
                     </div>
                     
-                    <button>Submit</button>
+                    <button type="submit">Submit</button>
 
                     <div class="social">
                         <div class="">
