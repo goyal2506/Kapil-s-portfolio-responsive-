@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;;
+}
+html{
+    scroll-behavior: smooth;
+}
+button{
+    cursor: pointer;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    height:10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin: 0 15px;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar .nav-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.home-profile{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+.home-profile img{
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+}
+.home-info{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro{ 
+    width: 265px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+.intro h1{
+    font-size: 25px;
+    font-weight: 500;
+}
+.intro button{
+    margin-top: 25px;
+    width: 100px;
+    background-color: blueviolet;
+    border: none;
+    outline: none;
+    color: white;
+    height: 35px;
+    border-radius: 5px;
+}
+.intro button:hover{
+    background-color: rgb(69, 10, 124);
+}
+@media (max-width: 768px){
+    #home{
+        display: block;
+    }
+    .home-info{
+        width: 100%;
+        height: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-profile{
+        width: 100%;
+        height: 50%;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .home-profile img{
+        width: 220px;
+        height: 250px;
+    }
+    .intro button{
+       width: 200px;
+    }
+}
+#about>h1 ,#skills>h1,#education>h1,#projects>h1,#contact>h1{
+    height: 10vh;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 600;
+}
+.about{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+}
+.about-photo img{
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+}
+.about-info{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+}
+.about-me{
+    width: 80%;
+    gap: 0.2rem;
+}
+.about-me h1{
+    font-weight: 400;
+}
+.about-me p{
+    font-weight: 300;
+}
+.about-me button{
+    width: 100px;
+    background-color: blueviolet;
+    border: none;
+    outline: none;
+    color: white;
+    height: 35px;
+    border-radius: 5px;
+}
+@media (max-width: 768px){
+    .about{
+        flex-direction: column;
+    }
+    .about-photo{
+        width: 100%;
+        height: 50%;
+    }
+    .about-info{
+        width: 100%;
+        height: 50%;
+    }
+    .about-photo img{
+        width:180px;
+        height: 250px;
+    }
+    .about-me{
+        text-align: center;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+.skill-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 20vh;
+}
+.skill-btn button{
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+}
+.skills{
+    height: 70vh;
+    margin: 0 300px;
+}
+.skills i{
+    font-size: 80px;
+}
+.frontend{
+    display: grid;
+    text-align: center;
+    grid-template-columns: auto auto auto ;
+    gap: 5rem;
+}
+.backend{
+    display: none;
+    text-align: center;
+    grid-template-columns: auto auto auto ;
+    gap: 5rem;
+}
+.other{
+    display: none;
+    text-align: center;
+    grid-template-columns: auto auto auto ;
+    gap: 5rem;
+}
+@media (max-width: 768px){
+    .frontend,.backend,.other{
+        grid-template-columns: auto auto ;
+        gap: 2.5rem;
+    }
+
+    .skills{
+        margin: 0 10px;
+    }
+}
+.education{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mca{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45vh;
+}
+.bca{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45vh;
+}
+.edu-card{ gap: 1rem;
+    background-color: rgba(240, 248, 255, 0.563);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.edu-info{
+    
+    gap: 1rem;
+
+}
+@media (max-width: 768px){
+.edu-card{
+    flex-direction: column;
+}
+.edu-info h2,h5{
+    text-align: center;
+    font-size: 15px;
+}
+.edu-info p{
+    text-align: center;
+    font-size: 12px;
+}
+}
+.projects{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden; /* Hide overflow when sliding */
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition */
+  }
+  
+  .card {
+    width: 100%;
+    min-width: 304px; /* Minimum width for smaller screens */
+    height: 400px;
+    margin: 10px;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+    color: black;
+  }
+  .card button{
+    margin: 10px 10px;
+    width: 100px;
+    padding: 5px;
+  }
+  .prev,.next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  button.prev {
+    left: 10px;
+  }
+  
+  button.next {
+    right: 10px;
+  }
+  
+  .prev,.next button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  
+  /* Media Query for Mobile Devices */
+  @media screen and (max-width: 480px) {
+    .slider-container {
+      width: 100%;
+    }
+  
+    .card {
+      min-width: 357px;
+      height: 400px; /* Adjust height for mobile */
+    }
+  
+    button {
+      font-size: 16px; /* Even smaller button size for mobile */
+    }
+  }
+  .contact{
+    height: 90vh;
+    background-color: #4CAF50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form{
+    background-color: white;
+    border: 0.5px solid black;
+    border-radius: 10px;
+  }
+  .form h1{
+    text-align: center;
+    padding: 20px 0;
+  }
+  input{
+    padding: 5px 10px;
+    width: 250px;
+    outline: none;
+    border-radius: 5px;
+  }
+  .ct{
+    display: grid;
+    grid-template-columns: auto auto  ;
+    gap: 2rem 0.5rem;
+    margin: 0 50px;
+  }
+  .textarea{
+    margin: 20px 50px;
+  }
+  textarea{
+    width: 40vw;
+    height: 15vh;
+  }
+  form button{
+    width: 80%;
+   margin: 10px 62px;
+   background-color: blueviolet;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+  }
+  .social{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+  .social a{
+    color: black;
+    font-size: 30px;
+    padding: 0 15px;
+}
+  @media screen and (max-width: 480px) {
+    input{
+        width: 200px;
+    }
+    .ct{
+        grid-template-columns:  auto  ;
+        gap: 0.5rem;
+    
+      }
+  textarea{
+    width: 200px;
+    height: 70px;
+  }
+      form button {
+        width: 80%;
+        margin: 15px 35px;
+      }
+      
+}
+
+
+footer{
+    background-color: rgb(0, 1, 45);
+    color: white;
+}
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-data{
+    width: 277px;
+    margin: 15px;
+}
+.footer-data p{
+    font-weight: 100;
+    font-size: 13px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.footer-links{
+    width: 277px;
+    margin: 15px;
+    margin-left: 15px;
+}
+.footer-links h3{
+    margin-left: 15px;
+}
+.footer-links a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 100;
+    font-size: 13px;
+    margin-left: 15px;
+}
+.footer-links a:hover{
+    color: rgb(253, 191, 33);
+}
+.footer-links li{
+    list-style: none;
+}
+.footer-contact{
+    width: 277px;
+    margin: 15px;
+}
+.footer-contact h3{
+    margin-bottom: 15px;
+}
+.footer-contact p{
+    margin-bottom: 10px;
+    font-weight: 100;
+    font-size: 13px;
+}
+.last-word{
+    text-align: center;
+    margin-top: 15px;
+}
+.last-word i{
+    color: red;
+    margin: 0px 5px;
+}
+
+@media screen and (max-width:480px){
+    .footer-container{
+        display: block;
+      }
+      .footer-links ul{
+        display: flex;
+      }
+      .footer-links h3{
+        margin-left: 0;
+      }
+      .footer-data{
+        margin: 0;
+        padding: 10px 20px;
+      }
+    
+}
